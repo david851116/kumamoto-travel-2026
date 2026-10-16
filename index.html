@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>九州 6 天 5 夜自由行手冊 | Kumamoto & Kyushu Mobile Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Kumamon cheek element accent */
+        .cheek-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #E53E3E;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Hide scrollbars for clean UI while keeping scroll functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Safe area support for modern iPhones */
+        .pb-safe {
+            padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 5rem);
+        }
+        .pt-safe {
+            padding-top: env(safe-area-inset-top, 0px);
+        }
+    </style>
+</head>
+<body class="h-full text-slate-800 antialiased selection:bg-red-500 selection:text-white pb-safe">
+
+    <header class="bg-zinc-900 text-white sticky top-0 z-40 shadow-md pt-safe">
+        <div class="px-3 py-2 flex justify-between items-center border-b border-zinc-800">
+            <div class="flex items-center space-x-2">
+                <div class="w-2.5 h-2.5 bg-red-600 rounded-full animate-pulse"></div>
+                <h1 class="font-extrabold text-sm tracking-tight text-white flex items-center gap-1.5">
+                    熊本・九州自由行
+                </h1>
+            </div>
+            <span class="text-[11px] font-semibold bg-zinc-800 text-red-400 px-2 py-0.5 rounded-full border border-zinc-700">
+                10/20 - 10/25
+            </span>
+        </div>
+
+        <!-- Quick Day Selector Horizontal Pill List -->
+        <div id="day-selector-bar" class="flex overflow-x-auto no-scrollbar py-1.5 px-2 space-x-1.5 bg-zinc-950/90 backdrop-blur border-b border-zinc-800/50">
+            <button onclick="selectDay(1)" id="day-btn-1" class="day-btn flex-shrink-0 px-3 py-1 rounded-full text-xs font-bold transition-all bg-red-600 text-white shadow-sm">
+                D1 <span class="font-normal opacity-80 text-[10px]">10/20</span>
+            </button>
+            <button onclick="selectDay(2)" id="day-btn-2" class="day-btn flex-shrink-0 px-3 py-1 rounded-full text-xs font-bold transition-all bg-zinc-800 text-zinc-300">
+                D2 <span class="font-normal opacity-80 text-[10px]">10/21</span>
+            </button>
+            <button onclick="selectDay(3)" id="day-btn-3" class="day-btn flex-shrink-0 px-3 py-1 rounded-full text-xs font-bold transition-all bg-zinc-800 text-zinc-300">
+                D3 <span class="font-normal opacity-80 text-[10px]">10/22</span>
+            </button>
+            <button onclick="selectDay(4)" id="day-btn-4" class="day-btn flex-shrink-0 px-3 py-1 rounded-full text-xs font-bold transition-all bg-zinc-800 text-zinc-300">
+                D4 <span class="font-normal opacity-80 text-[10px]">10/23</span>
+            </button>
+            <button onclick="selectDay(5)" id="day-btn-5" class="day-btn flex-shrink-0 px-3 py-1 rounded-full text-xs font-bold transition-all bg-zinc-800 text-zinc-300">
+                D5 <span class="font-normal opacity-80 text-[10px]">10/24</span>
+            </button>
+            <button onclick="selectDay(6)" id="day-btn-6" class="day-btn flex-shrink-0 px-3 py-1 rounded-full text-xs font-bold transition-all bg-zinc-800 text-zinc-300">
+                D6 <span class="font-normal opacity-80 text-[10px]">10/25</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="p-2.5 max-w-xl mx-auto pb-20">
+
+        <!-- SECTION 1: ITINERARY VIEW -->
+        <div id="section-itinerary" class="space-y-3">
+
+            <!-- Day 1 Content Card -->
+            <div id="day-card-1" class="day-card bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <div class="bg-zinc-900 text-white p-3 flex justify-between items-center">
+                    <div>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="bg-red-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">DAY 1</span>
+                            <span class="text-[11px] text-zinc-400">10/20 (二)</span>
+                        </div>
+                        <h2 class="font-bold text-sm mt-0.5">啟程・夜訪熊本城</h2>
+                    </div>
+                    <span class="text-[11px] bg-zinc-800 text-red-300 px-2 py-0.5 rounded-md border border-zinc-700">
+                        <i class="fa-solid fa-plane text-[9px] mr-1"></i>台中 ➔ 熊本
+                    </span>
+                </div>
+
+                <div class="p-3 space-y-2.5">
+                    <!-- Flight Detail Card in Day 1 -->
+                    <div class="p-2.5 bg-red-50/70 rounded-lg border border-red-100 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-7 h-7 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-[11px]">
+                                <i class="fa-solid fa-plane-departure"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">去程航班 ✈️ 星宇 JX316</p>
+                                <p class="text-[10px] text-slate-500">台中 (RMQ T2) 15:00 ➔ 熊本 (KMJ) 18:15</p>
+                            </div>
+                        </div>
+                        <span class="text-[9px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-bold">已確認</span>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">12:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">抵達台中機場第二航廈</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5"><i class="fa-regular fa-clock text-[9px] mr-1"></i>星宇航空櫃檯辦理報到與託運</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5 bg-red-50/40 -mx-3 px-3 py-2">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-red-600 block">15:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between">
+                                <p class="font-bold text-xs text-red-900">班機起飛 ✈️ JX316</p>
+                                <span class="text-[9px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-bold">星宇</span>
+                            </div>
+                            <p class="text-[11px] text-slate-600 mt-0.5">RMQ (二航) ➔ KMJ (15:00 ➔ 18:15 抵達)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">18:15</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">抵達熊本機場 (KMJ)</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">辦理入境手續、提取行李</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">19:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">搭乘產交利木津巴士</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5"><i class="fa-solid fa-bus text-[9px] text-blue-500 mr-1"></i>4號乘車處 ➔ 櫻町客運總站</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">20:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">飯店 Check-in</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5"><i class="fa-solid fa-hotel text-[9px] text-amber-500 mr-1"></i>熊本相鐵 GRAND FRESA</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start pb-1">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">20:30~</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">晚餐與夜遊</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">熊本城夜間點燈巡禮、逛唐吉訶德</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 pt-2 border-t border-dashed border-slate-200 bg-slate-50 -mx-3 -mb-3 p-2.5 rounded-b-xl text-[11px] space-y-1">
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-red-600 flex-shrink-0">🍜 美食:</span>
+                            <span class="text-slate-700">勝烈亭炸豬排 或 熊本黑亭拉麵</span>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-zinc-700 flex-shrink-0">💡 筆記:</span>
+                            <span class="text-slate-600">請確認至台中機場「第二航廈」辦理報到。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 Content Card -->
+            <div id="day-card-2" class="day-card bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <div class="bg-zinc-900 text-white p-3 flex justify-between items-center">
+                    <div>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="bg-red-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">DAY 2</span>
+                            <span class="text-[11px] text-zinc-400">10/21 (三)</span>
+                        </div>
+                        <h2 class="font-bold text-sm mt-0.5">城下町巡禮・移動至福岡</h2>
+                    </div>
+                    <span class="text-[11px] bg-zinc-800 text-blue-300 px-2 py-0.5 rounded-md border border-zinc-700">
+                        <i class="fa-solid fa-train text-[9px] mr-1"></i>熊本 ➔ 博多
+                    </span>
+                </div>
+
+                <div class="p-3 space-y-2.5">
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">08:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">飯店早餐 & 寄託行李</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">享用早餐，大行李寄放飯店櫃檯</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">09:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">熊本城巡禮 🏯</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">天守閣參觀、漫步歷史城區 (約1小時)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">10:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">櫻之馬場 城彩苑</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">體驗傳統城下町商街美食點心</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">10:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">上下通商店街</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">逛街購物、特色喫茶店享用咖啡</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5 bg-blue-50/40 -mx-3 px-3 py-2">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-blue-600 block">下午</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-blue-900">新幹線前往福岡 🚄</p>
+                            <p class="text-[11px] text-slate-600 mt-0.5">熊本站 ➔ 博多站 (乘車約 40 分鐘)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">15:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">&Hotel Hakata Check-in</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">辦理入住，放置行李</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">16:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">FullFull 麵包取件 🥖</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">品嚐招牌熱騰騰明太子法國麵包</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start pb-1">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">16:30~</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">福岡市區漫遊</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">櫛田神社 ➔ 博多運河城 ➔ 博多車站採買伴手禮</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 pt-2 border-t border-dashed border-slate-200 bg-slate-50 -mx-3 -mb-3 p-2.5 rounded-b-xl text-[11px] space-y-1">
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-red-600 flex-shrink-0">🍜 美食:</span>
+                            <span class="text-slate-700">午餐: 麵屋兼虎 / 麵屋一雙 | 晚餐: 博多運河城</span>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-zinc-700 flex-shrink-0">💡 筆記:</span>
+                            <span class="text-slate-600">移動日預留時間採購博多車站熱門伴手禮！</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 Content Card -->
+            <div id="day-card-3" class="day-card bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <div class="bg-zinc-900 text-white p-3 flex justify-between items-center">
+                    <div>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="bg-red-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">DAY 3</span>
+                            <span class="text-[11px] text-zinc-400">10/22 (四)</span>
+                        </div>
+                        <h2 class="font-bold text-sm mt-0.5">大濠公園湖畔與太宰府古風</h2>
+                    </div>
+                    <span class="text-[11px] bg-zinc-800 text-amber-300 px-2 py-0.5 rounded-md border border-zinc-700">
+                        <i class="fa-solid fa-torii-gate text-[9px] mr-1"></i>大濠公園・太宰府
+                    </span>
+                </div>
+
+                <div class="p-3 space-y-2.5">
+                    <div class="flex gap-2.5 items-start border-b border-amber-200 pb-2.5 bg-amber-50 -mx-3 px-3 py-2">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-amber-800 block">09:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between">
+                                <p class="font-bold text-xs text-amber-950">📍 預約早餐：炉端ノいとおかし</p>
+                                <span class="text-[9px] bg-amber-200 text-amber-800 px-1.5 py-0.5 rounded font-bold">已預約</span>
+                            </div>
+                            <p class="text-[11px] text-amber-800 mt-0.5">精緻日式早餐，務必準時抵達</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">10:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">大濠公園 🌳</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">湖畔悠閒散步、星巴克享受晨間/午茶咖啡</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">14:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">太宰府天滿宮 ⛩️</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">參道漫步、品嚐現烤梅枝餅、欣賞建築美學</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">17:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">天神商圈購物</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">天神 mina、天神地下街藥妝與服飾採買</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start pb-1">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">20:30~</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">屋台文化體驗 🍜</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">天神屋台：小金醬 (小金ちゃん) 體驗名物炒拉麵</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 pt-2 border-t border-dashed border-slate-200 bg-slate-50 -mx-3 -mb-3 p-2.5 rounded-b-xl text-[11px] space-y-1">
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-red-600 flex-shrink-0">🥩 美食:</span>
+                            <span class="text-slate-700">午: 太宰府小吃 / 石垣牛 | 晚: 黑田飯 / 屋台</span>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-zinc-700 flex-shrink-0">💡 筆記:</span>
+                            <span class="text-slate-600">熱門屋台建議提早 15-20 分鐘前往排隊！</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4 Content Card -->
+            <div id="day-card-4" class="day-card bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <div class="bg-zinc-900 text-white p-3 flex justify-between items-center">
+                    <div>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="bg-red-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">DAY 4</span>
+                            <span class="text-[11px] text-zinc-400">10/23 (五)</span>
+                        </div>
+                        <h2 class="font-bold text-sm mt-0.5">新幹線再訪熊本・阿蘇自駕</h2>
+                    </div>
+                    <span class="text-[11px] bg-zinc-800 text-emerald-400 px-2 py-0.5 rounded-md border border-zinc-700">
+                        <i class="fa-solid fa-car text-[9px] mr-1"></i>開始自駕
+                    </span>
+                </div>
+
+                <div class="p-3 space-y-2.5">
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">06:42</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">乘新幹線回熊本 🚄</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">Tsubame 309 號 (自由座 06:42 - 07:30)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-emerald-100 pb-2.5 bg-emerald-50/60 -mx-3 px-3 py-2">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-emerald-800 block">08:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-emerald-950">🚗 Budget 租車取車</p>
+                            <p class="text-[11px] text-emerald-800 mt-0.5">熊本站前店（護照、台灣駕照正本與日文譯本）</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">09:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">開車前往高千穗峽</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">途經超商買簡便點心與飲品補給</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-red-200 pb-2.5 bg-red-50 -mx-3 px-3 py-2">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-red-700 block">11:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between">
+                                <p class="font-bold text-xs text-red-950">📍 高千穗峽劃船體驗</p>
+                                <span class="text-[9px] bg-red-200 text-red-800 px-1.5 py-0.5 rounded font-bold">預約</span>
+                            </div>
+                            <p class="text-[11px] text-red-700 mt-0.5">預約 11:00（務必提早 15 分鐘報到！）</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">12:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">午餐：高森田樂之里 🍢</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">體驗圍爐裏日式傳統田樂味噌燒烤料理</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">14:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">秘境與火山巡禮</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">上色見熊野座神社 ➔ 白川水源 ➔ 草千里 / 阿蘇火山</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start pb-1">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">17:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">入住阿蘇白雲山莊 温泉</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">享受阿蘇天然溫泉與豐富特色會席料理晚餐</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 pt-2 border-t border-dashed border-slate-200 bg-slate-50 -mx-3 -mb-3 p-2.5 rounded-b-xl text-[11px] space-y-1">
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-red-600 flex-shrink-0">🍱 美食:</span>
+                            <span class="text-slate-700">午餐: 高森田樂之里 | 晚餐: 會席料理</span>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-zinc-700 flex-shrink-0">💡 筆記:</span>
+                            <span class="text-slate-600">山路駕駛注意車速；劃船證明請截圖隨身攜帶。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5 Content Card -->
+            <div id="day-card-5" class="day-card bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <div class="bg-zinc-900 text-white p-3 flex justify-between items-center">
+                    <div>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="bg-red-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">DAY 5</span>
+                            <span class="text-[11px] text-zinc-400">10/24 (六)</span>
+                        </div>
+                        <h2 class="font-bold text-sm mt-0.5">山海絕景・由布院溫泉</h2>
+                    </div>
+                    <span class="text-[11px] bg-zinc-800 text-emerald-400 px-2 py-0.5 rounded-md border border-zinc-700">
+                        <i class="fa-solid fa-mountain text-[9px] mr-1"></i>阿蘇 ➔ 別府
+                    </span>
+                </div>
+
+                <div class="p-3 space-y-2.5">
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">08:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">飯店早餐後出發</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">享受阿蘇山莊清新晨光與溫泉</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">09:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">大觀峰 ⛰️</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">俯瞰阿蘇五岳與巨大火山口壯麗地形</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">11:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">由布院 (湯布院) 漫步 🛍️</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">金鱗湖湖畔漫步、湯之坪街道特色店家與點心</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">16:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">私人湯屋泡湯 (貸切風呂) ♨️</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">專屬獨立湯屋體驗，舒緩旅途疲憊 (約 60-90 分鐘)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start pb-1">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">18:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">前往別府＆ Check-in</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">入住別府 AMANEK (AMANEK Beppu Yula-re)</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 pt-2 border-t border-dashed border-slate-200 bg-slate-50 -mx-3 -mb-3 p-2.5 rounded-b-xl text-[11px] space-y-1">
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-red-600 flex-shrink-0">🍚 美食:</span>
+                            <span class="text-slate-700">午餐: 由布院釜飯 (心 釜飯) | 晚餐: 別府印度料理</span>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-zinc-700 flex-shrink-0">💡 筆記:</span>
+                            <span class="text-slate-600">貸切風呂多採現場登記，建議午餐後先現場預約！</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 6 Content Card -->
+            <div id="day-card-6" class="day-card hidden bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <div class="bg-zinc-900 text-white p-3 flex justify-between items-center">
+                    <div>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="bg-red-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">DAY 6</span>
+                            <span class="text-[11px] text-zinc-400">10/25 (日)</span>
+                        </div>
+                        <h2 class="font-bold text-sm mt-0.5">別府地獄巡禮・滿載而歸</h2>
+                    </div>
+                    <span class="text-[11px] bg-zinc-800 text-red-400 px-2 py-0.5 rounded-md border border-zinc-700">
+                        <i class="fa-solid fa-plane-departure text-[9px] mr-1"></i>別府 ➔ 熊本 ➔ 台中
+                    </span>
+                </div>
+
+                <div class="p-3 space-y-2.5">
+                    <!-- Flight Detail Card in Day 6 -->
+                    <div class="p-2.5 bg-red-50/70 rounded-lg border border-red-100 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-7 h-7 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-[11px]">
+                                <i class="fa-solid fa-plane-arrival"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">回程航班 ✈️ 星宇 JX317</p>
+                                <p class="text-[10px] text-slate-500">熊本 (KMJ) 19:15 ➔ 台中 (RMQ T2) 21:05</p>
+                            </div>
+                        </div>
+                        <span class="text-[9px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-bold">已確認</span>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">08:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">別府地獄巡禮 🌋</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">海地獄、血池地獄，品嚐地獄蒸溫泉蛋 🥚</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">11:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">別府展望台 🔭</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">俯瞰別府灣與溫泉湯煙渺渺特有景象</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">13:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">午餐：壽司虎 🍣</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">享用特色人氣迴轉壽司料理</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">14:00</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">開車返回熊本空港 🚗</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">行經高速公路，記得預留時間加滿油箱</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-slate-100 pb-2.5">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">16:30</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">抵達熊本機場 & 還車</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">歸還租賃車輛、辦理登機與託運手續</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start border-b border-red-200 pb-2.5 bg-red-50/50 -mx-3 px-3 py-2">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-red-600 block">19:15</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-red-900">班機起飛 ✈️ JX317</p>
+                            <p class="text-[11px] text-slate-600 mt-0.5">KMJ ➔ RMQ T2 (19:15 ➔ 21:05 抵達)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2.5 items-start pb-1">
+                        <div class="w-10 flex-shrink-0 pt-0.5 text-center">
+                            <span class="font-bold text-xs text-slate-700 block">21:05</span>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold text-xs text-slate-800">平安抵達台中 🏠</p>
+                            <p class="text-[11px] text-slate-500 mt-0.5">結束豐富溫馨的九州 6 天 5 夜之旅！❤️</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 pt-2 border-t border-dashed border-slate-200 bg-slate-50 -mx-3 -mb-3 p-2.5 rounded-b-xl text-[11px] space-y-1">
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-red-600 flex-shrink-0">🍣 美食:</span>
+                            <span class="text-slate-700">午餐: 壽司虎 | 地獄蒸小吃</span>
+                        </div>
+                        <div class="flex items-start gap-1">
+                            <span class="font-bold text-zinc-700 flex-shrink-0">💡 筆記:</span>
+                            <span class="text-slate-600">還車前請在機場附近加油站加滿油並保留發票。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECTION 2: HOTELS & RESERVATIONS VIEW -->
+        <div id="section-info" class="hidden space-y-3">
+            <!-- Flight Overview Card in Info View -->
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-slate-900 border-b pb-1.5 mb-2 flex items-center gap-1.5 text-xs">
+                    <i class="fa-solid fa-plane text-red-600"></i>來回航班資訊
+                </h3>
+                <div class="space-y-2 text-xs">
+                    <div class="p-2.5 bg-red-50/60 rounded-lg border border-red-100 flex justify-between items-center">
+                        <div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="bg-red-600 text-white text-[8px] px-1 py-0.5 rounded font-bold">去程 10/20</span>
+                                <span class="font-bold text-slate-800 text-xs">星宇 JX316 (RMQ T2 ➔ KMJ)</span>
+                            </div>
+                            <p class="text-slate-600 text-[10px] mt-0.5"><i class="fa-regular fa-clock mr-1"></i>15:00 起飛 ➔ 18:15 抵達</p>
+                        </div>
+                        <span class="text-[9px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-bold">D1</span>
+                    </div>
+
+                    <div class="p-2.5 bg-red-50/60 rounded-lg border border-red-100 flex justify-between items-center">
+                        <div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="bg-zinc-800 text-white text-[8px] px-1 py-0.5 rounded font-bold">回程 10/25</span>
+                                <span class="font-bold text-slate-800 text-xs">星宇 JX317 (KMJ ➔ RMQ T2)</span>
+                            </div>
+                            <p class="text-slate-600 text-[10px] mt-0.5"><i class="fa-regular fa-clock mr-1"></i>19:15 起飛 ➔ 21:05 抵達</p>
+                        </div>
+                        <span class="text-[9px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-bold">D6</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-slate-900 border-b pb-1.5 mb-2 flex items-center gap-1.5 text-xs">
+                    <i class="fa-solid fa-hotel text-red-600"></i>住宿飯店清單
+                </h3>
+                <div class="space-y-2 text-xs">
+                    <div class="p-2 bg-slate-50 rounded-lg border border-slate-100">
+                        <span class="bg-zinc-800 text-white text-[8px] px-1.5 py-0.5 rounded font-bold">D1</span>
+                        <p class="font-bold text-xs text-slate-800 mt-0.5">熊本相鐵 GRAND FRESA</p>
+                        <p class="text-slate-500 text-[10px]">Sotetsu Grand Fresa Kumamoto</p>
+                    </div>
+                    <div class="p-2 bg-slate-50 rounded-lg border border-slate-100">
+                        <span class="bg-zinc-800 text-white text-[8px] px-1.5 py-0.5 rounded font-bold">D2 - D3</span>
+                        <p class="font-bold text-xs text-slate-800 mt-0.5">福岡 &Hotel Hakata</p>
+                        <p class="text-slate-500 text-[10px]">近博多站與櫛田神社</p>
+                    </div>
+                    <div class="p-2 bg-slate-50 rounded-lg border border-slate-100">
+                        <span class="bg-zinc-800 text-white text-[8px] px-1.5 py-0.5 rounded font-bold">D4</span>
+                        <p class="font-bold text-xs text-slate-800 mt-0.5">阿蘇白雲山莊</p>
+                        <p class="text-slate-500 text-[10px]">Aso Hakuunsansou (含一泊二食/溫泉)</p>
+                    </div>
+                    <div class="p-2 bg-slate-50 rounded-lg border border-slate-100">
+                        <span class="bg-zinc-800 text-white text-[8px] px-1.5 py-0.5 rounded font-bold">D5</span>
+                        <p class="font-bold text-xs text-slate-800 mt-0.5">別府 AMANEK</p>
+                        <p class="text-slate-500 text-[10px]">AMANEK Beppu Yula-re</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-slate-900 border-b pb-1.5 mb-2 flex items-center gap-1.5 text-xs">
+                    <i class="fa-solid fa-bookmark text-red-600"></i>關鍵預約項目
+                </h3>
+                <div class="space-y-1.5 text-xs">
+                    <div class="flex justify-between items-center p-2 bg-amber-50 rounded-lg text-amber-900 border border-amber-200/60">
+                        <span>10/22 09:00 早餐: 炉端ノいとおかし</span>
+                        <span class="bg-amber-200 text-amber-800 px-1.5 py-0.5 rounded font-bold text-[9px]">已預約</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-slate-50 rounded-lg text-slate-800 border border-slate-200/60">
+                        <span>10/23 06:42 新幹線 Tsubame 309 號</span>
+                        <span class="bg-slate-200 text-slate-700 px-1.5 py-0.5 rounded font-bold text-[9px]">博多➔熊本</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-emerald-50 rounded-lg text-emerald-900 border border-emerald-200/60">
+                        <span>10/23 08:00 Budget 租車 (熊本站前)</span>
+                        <span class="bg-emerald-200 text-emerald-800 px-1.5 py-0.5 rounded font-bold text-[9px]">自駕開始</span>
+                    </div>
+                    <div class="flex justify-between items-center p-2 bg-red-50 rounded-lg text-red-900 border border-red-200/60">
+                        <span>10/23 11:00 高千穗峽劃船體驗</span>
+                        <span class="bg-red-200 text-red-800 px-1.5 py-0.5 rounded font-bold text-[9px]">已預約</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: EXPANDED PACKING CHECKLIST VIEW -->
+        <div id="section-checklist" class="hidden space-y-3">
+            
+            <div class="bg-zinc-900 text-white rounded-xl p-3 shadow-sm flex justify-between items-center">
+                <div>
+                    <h3 class="font-extrabold text-sm flex items-center gap-1.5">
+                        <i class="fa-solid fa-clipboard-list text-red-500"></i>出國行前攜帶清單
+                    </h3>
+                    <p class="text-[10px] text-zinc-400 mt-0.5">點擊即可勾選並儲存進度</p>
+                </div>
+                <button onclick="resetChecklist()" class="text-[11px] bg-zinc-800 hover:bg-zinc-700 text-red-400 border border-zinc-700 px-2 py-1 rounded-md transition-all">
+                    <i class="fa-solid fa-rotate-left mr-0.5"></i>重設
+                </button>
+            </div>
+
+            <!-- Category 1: 核心證件與財務 -->
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm space-y-1.5">
+                <h4 class="font-bold text-slate-900 text-xs border-b pb-1 text-red-600 flex items-center gap-1">
+                    <i class="fa-solid fa-id-card"></i> 核心重要證件與財務
+                </h4>
+                <div class="space-y-1 text-xs">
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span class="font-bold text-slate-800">護照正本 (確認6個月以上效期)</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span class="font-bold text-slate-800">台灣駕照正本 + 駕照日文譯本</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>日幣現金 (鈔票與零錢分開)</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>海外刷卡信用卡</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>機票 / 飯店 / 租車預約憑證</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Category 2: 3C 與通訊設備 -->
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm space-y-1.5">
+                <h4 class="font-bold text-slate-900 text-xs border-b pb-1 text-blue-600 flex items-center gap-1">
+                    <i class="fa-solid fa-mobile-screen-button"></i> 3C 通訊與數位設備
+                </h4>
+                <div class="space-y-1 text-xs">
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>日本漫遊網卡 (SIM / eSIM) / Wi-Fi 機</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>行動電源 (手提上機，嚴禁託運)</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>手機充電線、快充頭</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>自駕車用手機支架 & 車充線</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Category 3: 衣物與個人配件 -->
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm space-y-1.5">
+                <h4 class="font-bold text-slate-900 text-xs border-b pb-1 text-emerald-600 flex items-center gap-1">
+                    <i class="fa-solid fa-shirt"></i> 衣物穿搭與配件
+                </h4>
+                <div class="space-y-1 text-xs">
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>換洗內衣褲、襪子與替換衣物</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>保暖防風外套 (阿蘇山區氣溫較低)</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>好走舒適的球鞋 / 健走鞋</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>墨鏡 / 遮陽帽 / 折疊雨傘</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Category 4: 藥品與個人保養 -->
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm space-y-1.5">
+                <h4 class="font-bold text-slate-900 text-xs border-b pb-1 text-purple-600 flex items-center gap-1">
+                    <i class="fa-solid fa-pump-medical"></i> 藥品、盥洗與衛生用品
+                </h4>
+                <div class="space-y-1 text-xs">
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>常備藥物 (感冒、胃藥、止痛、暈車藥)</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>個人保養品、保濕乳液、護唇膏</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>防曬乳 / 防蚊液 (戶外必備)</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>紙巾、濕紙巾、口罩、OK繃</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Category 5: 雜項與包包 -->
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm space-y-1.5">
+                <h4 class="font-bold text-slate-900 text-xs border-b pb-1 text-amber-600 flex items-center gap-1">
+                    <i class="fa-solid fa-suitcase"></i> 旅遊隨身雜項
+                </h4>
+                <div class="space-y-1 text-xs">
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>折疊式大購物袋 (戰利品備用)</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>日幣硬幣零錢包</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-1.5 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer transition-colors">
+                        <input type="checkbox" onchange="saveChecklist()" class="chk-item w-3.5 h-3.5 accent-red-600 rounded">
+                        <span>保溫瓶 / 行李束帶與密碼鎖</span>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECTION 4: INTERACTIVE EXPENSES & BUDGET TRACKER -->
+        <div id="section-expenses" class="hidden space-y-3">
+            
+            <!-- Summary Totals Display -->
+            <div class="bg-gradient-to-br from-zinc-900 to-zinc-800 text-white rounded-xl p-3 shadow-md">
+                <div class="flex justify-between items-center border-b border-zinc-700 pb-1.5 mb-2">
+                    <div>
+                        <span class="text-[9px] text-red-400 font-bold uppercase tracking-wider block">EXPENSE TRACKER</span>
+                        <h3 class="font-extrabold text-sm flex items-center gap-1.5 mt-0.5">
+                            自由行記帳與費用統計 💰
+                        </h3>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-2 text-center">
+                    <div class="bg-zinc-800/90 p-2 rounded-lg border border-zinc-700/80">
+                        <p class="text-[9px] text-zinc-400">總支出 (TWD)</p>
+                        <p id="total-twd" class="text-sm font-extrabold text-red-400 mt-0.5">NT$ 0</p>
+                    </div>
+                    <div class="bg-zinc-800/90 p-2 rounded-lg border border-zinc-700/80">
+                        <p class="text-[9px] text-zinc-400">總支出 (JPY)</p>
+                        <p id="total-jpy" class="text-sm font-extrabold text-amber-400 mt-0.5">¥ 0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form: Add Custom Expense -->
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm space-y-2">
+                <h3 class="font-bold text-slate-900 border-b pb-1.5 flex items-center gap-1.5 text-xs">
+                    <i class="fa-solid fa-plus-circle text-red-600"></i>新增記帳項目
+                </h3>
+                
+                <form id="expense-form" onsubmit="addExpense(event)" class="space-y-2 text-xs">
+                    <div>
+                        <label class="block text-slate-600 mb-0.5 font-medium text-[11px]">消費項目</label>
+                        <input type="text" id="exp-name" placeholder="如: 熊本城門票, 勝烈亭" required 
+                               class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-red-500">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label class="block text-slate-600 mb-0.5 font-medium text-[11px]">金額</label>
+                            <input type="number" id="exp-amount" min="1" step="any" placeholder="例如: 1500" required 
+                                   class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-red-500">
+                        </div>
+                        <div>
+                            <label class="block text-slate-600 mb-0.5 font-medium text-[11px]">幣別</label>
+                            <select id="exp-currency" class="w-full px-2 py-1.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-red-500 bg-white">
+                                <option value="JPY">日幣 (JPY)</option>
+                                <option value="TWD">台幣 (TWD)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-slate-600 mb-0.5 font-medium text-[11px]">分類</label>
+                        <select id="exp-category" class="w-full px-2 py-1.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-red-500 bg-white">
+                            <option value="flight">✈️ 機票 / 航班</option>
+                            <option value="hotel">🏨 飯店住宿</option>
+                            <option value="transport">🚗 租車交通</option>
+                            <option value="food">🍜 餐飲美食</option>
+                            <option value="activity">🎟️ 門票體驗</option>
+                            <option value="shopping">🛍️ 購物伴手禮</option>
+                            <option value="other">💡 其他消費</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded-lg shadow-sm transition-all flex items-center justify-center gap-1 mt-1">
+                        <i class="fa-solid fa-check text-xs"></i> 加入消費紀錄
+                    </button>
+                </form>
+            </div>
+
+            <!-- Expense List Display -->
+            <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm space-y-2">
+                <div class="flex justify-between items-center border-b pb-1.5">
+                    <h3 class="font-bold text-slate-900 flex items-center gap-1.5 text-xs">
+                        <i class="fa-solid fa-list text-red-600"></i>消費明細列表
+                    </h3>
+                    <button onclick="clearExpenses()" class="text-[10px] text-slate-400 hover:text-red-500 transition-colors">
+                        <i class="fa-solid fa-trash-can mr-0.5"></i>清空
+                    </button>
+                </div>
+
+                <div id="expense-list-container" class="space-y-1.5 text-xs">
+                    <!-- Dynamic rendering via JS -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 shadow-lg z-50 px-2 py-1.5">
+        <div class="max-w-xl mx-auto flex justify-around items-center text-[10px] font-medium">
+            <button onclick="showSection('itinerary')" id="nav-itinerary" class="nav-tab flex flex-col items-center text-red-600 space-y-0.5">
+                <i class="fa-solid fa-calendar-days text-base"></i>
+                <span>行程</span>
+            </button>
+            <button onclick="showSection('info')" id="nav-info" class="nav-tab flex flex-col items-center text-slate-400 space-y-0.5">
+                <i class="fa-solid fa-hotel text-base"></i>
+                <span>飯店/預約</span>
+            </button>
+            <button onclick="showSection('checklist')" id="nav-checklist" class="nav-tab flex flex-col items-center text-slate-400 space-y-0.5">
+                <i class="fa-solid fa-list-check text-base"></i>
+                <span>清單</span>
+            </button>
+            <button onclick="showSection('expenses')" id="nav-expenses" class="nav-tab flex flex-col items-center text-slate-400 space-y-0.5">
+                <i class="fa-solid fa-calculator text-base"></i>
+                <span>記帳</span>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        // Default initial preset expenses for standard quick load
+        const defaultExpenses = [
+            { id: 1, name: '星宇航空來回機票 (JX316/JX317)', amount: 13500, currency: 'TWD', category: 'flight' },
+            { id: 2, name: '相鐵/&Hotel/阿蘇山莊/別府 住宿預估', amount: 11000, currency: 'TWD', category: 'hotel' },
+            { id: 3, name: 'Budget 租車 3 天 (熊本站前)', amount: 18000, currency: 'JPY', category: 'transport' },
+            { id: 4, name: '高千穗峽劃船體驗 (已預約)', amount: 5000, currency: 'JPY', category: 'activity' }
+        ];
+
+        let expensesList = [];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            selectDay(1);
+            loadChecklist();
+            loadExpenses();
+        });
+
+        // Day Selector Switcher
+        function selectDay(dayNum) {
+            const cards = document.querySelectorAll('.day-card');
+            cards.forEach(card => card.classList.add('hidden'));
+
+            const selectedCard = document.getElementById(`day-card-${dayNum}`);
+            if (selectedCard) {
+                selectedCard.classList.remove('hidden');
+            }
+
+            const buttons = document.querySelectorAll('.day-btn');
+            buttons.forEach(btn => {
+                btn.className = "day-btn flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all bg-zinc-800 text-zinc-300";
+            });
+
+            const activeBtn = document.getElementById(`day-btn-${dayNum}`);
+            if (activeBtn) {
+                activeBtn.className = "day-btn flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all bg-red-600 text-white shadow-sm";
+            }
+
+            showSection('itinerary');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Main Tab Switcher
+        function showSection(sectionId) {
+            const sections = ['itinerary', 'info', 'checklist', 'expenses'];
+            sections.forEach(sec => {
+                const el = document.getElementById(`section-${sec}`);
+                if (el) el.classList.add('hidden');
+            });
+
+            const target = document.getElementById(`section-${sectionId}`);
+            if (target) target.classList.remove('hidden');
+
+            const daySelectorBar = document.getElementById('day-selector-bar');
+            if (daySelectorBar) {
+                if (sectionId === 'itinerary') {
+                    daySelectorBar.classList.remove('hidden');
+                } else {
+                    daySelectorBar.classList.add('hidden');
+                }
+            }
+
+            const tabs = ['itinerary', 'info', 'checklist', 'expenses'];
+            tabs.forEach(tab => {
+                const navBtn = document.getElementById(`nav-${tab}`);
+                if (navBtn) {
+                    if (tab === sectionId) {
+                        navBtn.className = "nav-tab flex flex-col items-center text-red-600 space-y-1";
+                    } else {
+                        navBtn.className = "nav-tab flex flex-col items-center text-slate-400 space-y-1";
+                    }
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Checklist LocalStorage Functions
+        function saveChecklist() {
+            const checkboxes = document.querySelectorAll('.chk-item');
+            const states = Array.from(checkboxes).map(chk => chk.checked);
+            localStorage.setItem('kyushu_checklist_states', JSON.stringify(states));
+        }
+
+        function loadChecklist() {
+            const saved = localStorage.getItem('kyushu_checklist_states');
+            if (saved) {
+                try {
+                    const states = JSON.parse(saved);
+                    const checkboxes = document.querySelectorAll('.chk-item');
+                    checkboxes.forEach((chk, index) => {
+                        if (states[index] !== undefined) {
+                            chk.checked = states[index];
+                        }
+                    });
+                } catch(e) {
+                    console.error("Error loading checklist", e);
+                }
+            }
+        }
+
+        function resetChecklist() {
+            const checkboxes = document.querySelectorAll('.chk-item');
+            checkboxes.forEach(chk => chk.checked = false);
+            saveChecklist();
+        }
+
+        // Expense Tracker Functions
+        function loadExpenses() {
+            const saved = localStorage.getItem('kyushu_expenses_data');
+            if (saved) {
+                try {
+                    expensesList = JSON.parse(saved);
+                } catch(e) {
+                    expensesList = [...defaultExpenses];
+                }
+            } else {
+                expensesList = [...defaultExpenses];
+            }
+            renderExpenses();
+        }
+
+        function saveExpenses() {
+            localStorage.setItem('kyushu_expenses_data', JSON.stringify(expensesList));
+            renderExpenses();
+        }
+
+        function addExpense(e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('exp-name');
+            const amountInput = document.getElementById('exp-amount');
+            const currencyInput = document.getElementById('exp-currency');
+            const categoryInput = document.getElementById('exp-category');
+
+            const newExp = {
+                id: Date.now(),
+                name: nameInput.value.trim(),
+                amount: parseFloat(amountInput.value),
+                currency: currencyInput.value,
+                category: categoryInput.value
+            };
+
+            expensesList.unshift(newExp);
+            saveExpenses();
+
+            nameInput.value = '';
+            amountInput.value = '';
+        }
+
+        function deleteExpense(id) {
+            expensesList = expensesList.filter(item => item.id !== id);
+            saveExpenses();
+        }
+
+        function clearExpenses() {
+            if (confirm('確定要清空所有記帳項目嗎？')) {
+                expensesList = [];
+                saveExpenses();
+            }
+        }
+
+        function getCategoryIcon(cat) {
+            switch(cat) {
+                case 'flight': return '<i class="fa-solid fa-plane text-red-500"></i>';
+                case 'hotel': return '<i class="fa-solid fa-hotel text-blue-500"></i>';
+                case 'transport': return '<i class="fa-solid fa-car text-emerald-500"></i>';
+                case 'food': return '<i class="fa-solid fa-utensils text-orange-500"></i>';
+                case 'activity': return '<i class="fa-solid fa-ticket text-amber-500"></i>';
+                case 'shopping': return '<i class="fa-solid fa-bag-shopping text-purple-500"></i>';
+                default: return '<i class="fa-solid fa-receipt text-slate-500"></i>';
+            }
+        }
+
+        function renderExpenses() {
+            const container = document.getElementById('expense-list-container');
+            const totalTwdEl = document.getElementById('total-twd');
+            const totalJpyEl = document.getElementById('total-jpy');
+
+            if (!container) return;
+
+            let totalTWD = 0;
+            let totalJPY = 0;
+
+            if (expensesList.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-6 text-slate-400">
+                        <i class="fa-solid fa-pen-to-square text-2xl mb-1 block"></i>
+                        <p class="text-xs">尚無消費紀錄，請在上方新增！</p>
+                    </div>
+                `;
+            } else {
+                let html = '';
+                expensesList.forEach(item => {
+                    if (item.currency === 'TWD') {
+                        totalTWD += item.amount;
+                    } else {
+                        totalJPY += item.amount;
+                    }
+
+                    const symbol = item.currency === 'TWD' ? 'NT$' : '¥';
+                    const amountFormatted = item.amount.toLocaleString();
+
+                    html += `
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100 flex justify-between items-center">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-7 h-7 rounded-full bg-white border border-slate-200 flex items-center justify-center font-bold text-xs">
+                                    ${getCategoryIcon(item.category)}
+                                </div>
+                                <div>
+                                    <p class="font-bold text-xs text-slate-800">${item.name}</p>
+                                    <p class="text-[10px] text-slate-400">${item.currency}</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-extrabold text-slate-800">${symbol} ${amountFormatted}</span>
+                                <button onclick="deleteExpense(${item.id})" class="text-slate-300 hover:text-red-500 p-1">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+                container.innerHTML = html;
+            }
+
+            totalTwdEl.textContent = `NT$ ${totalTWD.toLocaleString()}`;
+            totalJpyEl.textContent = `¥ ${totalJPY.toLocaleString()}`;
+        }
+    </script>
+</body>
+</html>
